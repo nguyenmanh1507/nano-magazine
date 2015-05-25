@@ -1,0 +1,16 @@
+.latest-news-section {
+
+	@media (max-width: 767px) {
+
+		& .flex > .flex-item:first-child .frontpage-post {
+			padding-bottom: 25px;
+			border-bottom: 5px solid $light-gray;
+		}
+
+		& .flex > .flex-item:last-child .frontpage-post {
+			padding-bottom: 0;
+			border-bottom: none;
+			margin-bottom: 15px;
+		}
+	}
+}

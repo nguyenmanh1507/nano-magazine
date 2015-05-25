@@ -1,0 +1,1581 @@
+/*
+Theme Name: Nano
+Theme URI: http://cactusthemes.com/
+Author: Nano Theme
+Author URI: http://cactusthemes.com/
+Description: The 2015 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: nano
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+* 1. COLOR
+*
+* Base color for theme.
+*/
+/* Color hex */
+/* color schema */
+/**
+* 2. FONT
+*
+* Font size, font-family, line-height setting.
+*/
+/**
+* FONT SETTING
+*
+*/
+/* line 5, sass/base/_font-family.scss */
+body {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #FFFFFF;
+}
+
+/**
+* GENERAL SETTING
+*
+*/
+/* line 6, sass/base/_base.scss */
+.ie9 body {
+  background-color: red;
+}
+
+/* line 10, sass/base/_base.scss */
+body {
+  font-weight: normal;
+}
+
+/* line 14, sass/base/_base.scss */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, sass/base/_base.scss */
+img {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  /* line 20, sass/base/_base.scss */
+  img {
+    width: 100%;
+  }
+}
+
+/* line 28, sass/base/_base.scss */
+p {
+  margin-bottom: 0;
+}
+
+/* line 32, sass/base/_base.scss */
+a,
+a:active,
+a:hover {
+  outline: none !important;
+}
+
+@media (min-width: 1200px) {
+  /* line 40, sass/base/_base.scss */
+  .container {
+    width: 1140px;
+  }
+}
+/* line 1, sass/modules/_helper.scss */
+.flex {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is prefixed with -webkit because 9.47897% of users need it which is more than the threshold of 0.01%. */
+  /* Creating new -webkit context. */
+  display: -webkit-flex;
+  display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is prefixed with -webkit because 9.47897% of users need it which is more than the threshold of 0.01%. */
+  /* Creating new -webkit context. */
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 10, sass/modules/_helper.scss */
+.flex:before, .flex:after {
+  content: " ";
+  display: table;
+  width: 0;
+}
+@media (max-width: 767px) {
+  /* line 1, sass/modules/_helper.scss */
+  .flex {
+    display: block;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 26, sass/modules/_helper.scss */
+  .headline-section .flex-item {
+    width: 255px;
+  }
+}
+
+/* line 32, sass/modules/_helper.scss */
+.gray-bg {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+}
+@media (max-width: 767px) {
+  /* line 32, sass/modules/_helper.scss */
+  .gray-bg {
+    background-color: #FFFFFF;
+  }
+}
+
+/* line 41, sass/modules/_helper.scss */
+.white-bg {
+  background-color: #FFFFFF;
+  padding: 65px 0 35px;
+}
+
+/* line 46, sass/modules/_helper.scss */
+.text-frame {
+  margin: 0;
+  text-transform: uppercase;
+  background-color: #9CBA75;
+  display: inline-block;
+  padding: 0 7px;
+}
+/* line 53, sass/modules/_helper.scss */
+.text-frame a {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  vertical-align: bottom;
+}
+
+/* line 61, sass/modules/_helper.scss */
+.post-author,
+.comment-author-link {
+  color: #999999;
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1em;
+}
+/* line 71, sass/modules/_helper.scss */
+.post-author > a,
+.comment-author-link > a {
+  color: #9CBA75;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 75, sass/modules/_helper.scss */
+.post-author > a:hover,
+.comment-author-link > a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+/* line 81, sass/modules/_helper.scss */
+.misc-section .post-author, .misc-section
+.comment-author-link {
+  margin-bottom: 20px;
+}
+
+/* line 86, sass/modules/_helper.scss */
+.frontpage-post {
+  margin-bottom: 25px;
+  color: #444444;
+  position: relative;
+}
+/* line 94, sass/modules/_helper.scss */
+.frontpage-post > a:first-child {
+  display: block;
+  margin-bottom: 13px;
+  position: relative;
+}
+/* line 99, sass/modules/_helper.scss */
+.frontpage-post > a:first-child:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: background-color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: background-color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+/* line 110, sass/modules/_helper.scss */
+.frontpage-post > a:first-child:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 115, sass/modules/_helper.scss */
+.frontpage-post .frontpage-post-title {
+  margin: 0;
+  font-size: 18px;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+}
+/* line 123, sass/modules/_helper.scss */
+.frontpage-post .frontpage-post-title > a {
+  color: #222222;
+}
+/* line 130, sass/modules/_helper.scss */
+.frontpage-post.horizontal-style > a:first-child {
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+}
+@media (max-width: 767px) {
+  /* line 136, sass/modules/_helper.scss */
+  .frontpage-post.horizontal-style.frontpage-post-featured {
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #f4f4f4;
+  }
+  /* line 143, sass/modules/_helper.scss */
+  .frontpage-post.horizontal-style.frontpage-post-featured > a:first-child {
+    display: block;
+    margin-right: 0;
+    float: none;
+  }
+}
+/* line 154, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video {
+  margin-bottom: 65px;
+}
+/* line 157, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video .video-wrapp {
+  position: relative;
+  margin-bottom: 15px;
+}
+/* line 161, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video .video-wrapp .video-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: #9CBA75;
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+/* line 175, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video .video-wrapp > a:first-child {
+  display: block;
+  position: relative;
+}
+/* line 179, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video .video-wrapp > a:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: opacity 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: opacity 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+/* line 191, sass/modules/_helper.scss */
+.frontpage-post.frontpage-post-video .video-wrapp > a:first-child:hover:after {
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 198, sass/modules/_helper.scss */
+.frontpage-post .ribbon {
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+@media (max-width: 767px) {
+  /* line 204, sass/modules/_helper.scss */
+  .headline-section .frontpage-post {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-right: -15px;
+    margin-left: -15px;
+    border-bottom: 1px dotted #999999;
+  }
+  /* line 213, sass/modules/_helper.scss */
+  .headline-section .frontpage-post > a:first-child {
+    width: 50%;
+    padding-right: 20px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+  }
+  /* line 221, sass/modules/_helper.scss */
+  .headline-section .frontpage-post figcaption,
+  .headline-section .frontpage-post div {
+    width: 50%;
+    float: right;
+  }
+}
+/* line 228, sass/modules/_helper.scss */
+.headline-section .frontpage-post .frontpage-post-title {
+  margin-bottom: 15px;
+}
+/* line 233, sass/modules/_helper.scss */
+.latest-news-section .frontpage-post {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+/* line 237, sass/modules/_helper.scss */
+.latest-news-section .frontpage-post .frontpage-post-title {
+  margin-bottom: 20px;
+}
+/* line 241, sass/modules/_helper.scss */
+.latest-news-section .frontpage-post .post-author {
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  /* line 233, sass/modules/_helper.scss */
+  .latest-news-section .frontpage-post {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 233, sass/modules/_helper.scss */
+  .latest-news-section .frontpage-post {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #999999;
+  }
+}
+/* line 256, sass/modules/_helper.scss */
+.video-section .frontpage-post {
+  margin-bottom: 35px;
+}
+/* line 261, sass/modules/_helper.scss */
+.misc-section .frontpage-post .frontpage-post-title {
+  margin-bottom: 15px;
+}
+
+/* line 269, sass/modules/_helper.scss */
+.frontpage-post-sub-featured .frontpage-post.horizontal-style {
+  margin-bottom: 0;
+}
+/* line 272, sass/modules/_helper.scss */
+.frontpage-post-sub-featured .frontpage-post.horizontal-style > a:first-child {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  /* line 272, sass/modules/_helper.scss */
+  .frontpage-post-sub-featured .frontpage-post.horizontal-style > a:first-child {
+    margin-bottom: 20px;
+  }
+}
+/* line 282, sass/modules/_helper.scss */
+.frontpage-post-sub-featured .horizontal-style > a > img {
+  width: 75px;
+  height: 75px;
+}
+@media (max-width: 767px) {
+  /* line 289, sass/modules/_helper.scss */
+  .frontpage-post-sub-featured .horizontal-style > a {
+    margin: 0;
+  }
+}
+
+/* line 295, sass/modules/_helper.scss */
+.post-rate-frame {
+  font-size: 13px;
+  display: inline-block;
+  background-color: #9CBA75;
+  padding: 0 5px;
+  height: auto;
+  vertical-align: middle;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+/* line 306, sass/modules/_helper.scss */
+.section-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 311, sass/modules/_helper.scss */
+.latest-news-section .section-title {
+  margin-bottom: 25px;
+}
+/* line 315, sass/modules/_helper.scss */
+.section-title hr {
+  margin: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border: none;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+/* line 328, sass/modules/_helper.scss */
+.ribbon,
+a.ribbon {
+  display: inline-block;
+  padding: 0 7px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  position: relative;
+}
+/* line 339, sass/modules/_helper.scss */
+.ribbon:after,
+a.ribbon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #222222;
+  border-left: 10px solid transparent;
+}
+
+/* line 351, sass/modules/_helper.scss */
+.ribbon-heading {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  font-family: "Roboto Slab", serif;
+  z-index: 20;
+}
+
+/* line 360, sass/modules/_helper.scss */
+.ribbon.ribbon-sub-heading {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px 15px;
+}
+
+/* line 367, sass/modules/_helper.scss */
+.ribbon-green {
+  background-color: #9CBA75;
+}
+
+/* line 371, sass/modules/_helper.scss */
+.ribbon-red {
+  background-color: #D75353;
+}
+
+/* line 375, sass/modules/_helper.scss */
+.ribbon-orange {
+  background-color: #E7864B;
+}
+
+/* line 379, sass/modules/_helper.scss */
+.ribbon-purple {
+  background-color: #B34BC6;
+}
+
+/* line 383, sass/modules/_helper.scss */
+.ribbon-yellow {
+  background-color: #FEDB66;
+}
+
+/* line 387, sass/modules/_helper.scss */
+.widget-title {
+  margin: 0 0 30px 0;
+  padding: 0;
+  padding-bottom: 15px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+/* line 395, sass/modules/_helper.scss */
+.widget-title span {
+  /* Capability css-boxshadow is prefixed with -moz because 0.16452% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-box-shadow: inset 0 -5px 0 0 #9CBA75;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 1.6785% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-box-shadow: inset 0 -5px 0 0 #9CBA75;
+  box-shadow: inset 0 -5px 0 0 #9CBA75;
+  padding-bottom: 13px;
+}
+
+/* line 401, sass/modules/_helper.scss */
+.btn {
+  /* Capability border-radius is prefixed with -moz because 0.25036% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-border-radius: 3px;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.1583% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #DDDDDD;
+  border: none;
+  box-shadow: none;
+  color: #444444;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: all 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: all 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 409, sass/modules/_helper.scss */
+.btn:hover, .btn:focus, .btn:active {
+  background: #444444;
+  box-shadow: none;
+  outline: none !important;
+}
+
+/* line 418, sass/modules/_helper.scss */
+.btn-primary {
+  background-color: #9CBA75;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 8px 15px;
+  color: #26232D;
+}
+
+/* line 428, sass/modules/_helper.scss */
+.btn-readmore:hover {
+  color: #FFFFFF;
+}
+/* line 432, sass/modules/_helper.scss */
+.misc-section .btn-readmore {
+  margin-top: 20px;
+}
+
+/* line 437, sass/modules/_helper.scss */
+#scroll-to-top {
+  font-size: 28px;
+  color: #FFFFFF;
+  background-color: #b2b2b2;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  /* Capability border-radius is prefixed with -moz because 0.25036% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-border-radius: 50%;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.1583% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  display: none;
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  z-index: 100;
+}
+@media (max-width: 767px) {
+  /* line 437, sass/modules/_helper.scss */
+  #scroll-to-top {
+    background-color: rgba(178, 178, 178, 0.8);
+  }
+}
+
+/* HEADER */
+/* line 2, sass/modules/_header.scss */
+#header {
+  background-color: #26232D;
+  padding: 16px 0 19px;
+}
+
+/* line 7, sass/modules/_header.scss */
+.logo {
+  display: inline-block;
+  float: left;
+  margin: 0 50px 0 0;
+}
+/* line 12, sass/modules/_header.scss */
+.logo > a {
+  background: transparent url("images/logo.png") no-repeat left top;
+  display: block;
+  height: 25px;
+  width: 76px;
+  text-indent: -99999px;
+}
+
+/* line 21, sass/modules/_header.scss */
+.main-nav {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+/* line 27, sass/modules/_header.scss */
+.main-nav > ul > li {
+  float: left;
+  margin-right: 40px;
+  line-height: 21px;
+  position: relative;
+}
+/* line 33, sass/modules/_header.scss */
+.main-nav > ul > li.current > a {
+  color: #9CBA75;
+}
+/* line 37, sass/modules/_header.scss */
+.main-nav > ul > li:hover > ul {
+  display: block;
+}
+/* line 41, sass/modules/_header.scss */
+.main-nav > ul > li:hover:after {
+  display: block;
+}
+/* line 45, sass/modules/_header.scss */
+.main-nav > ul > li:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 150px;
+  height: 24px;
+  background-color: transparent;
+  display: none;
+}
+/* line 56, sass/modules/_header.scss */
+.main-nav > ul > li > ul {
+  display: none;
+  left: -20px;
+  top: 44px;
+  position: absolute;
+  z-index: 30;
+}
+/* line 63, sass/modules/_header.scss */
+.main-nav > ul > li > ul li {
+  position: relative;
+  background-color: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 150px;
+}
+/* line 69, sass/modules/_header.scss */
+.main-nav > ul > li > ul li:last-child {
+  border-bottom: none;
+}
+/* line 73, sass/modules/_header.scss */
+.main-nav > ul > li > ul li > ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-left: 2px solid transparent;
+}
+/* line 81, sass/modules/_header.scss */
+.main-nav > ul > li > ul li:hover > ul {
+  display: block;
+}
+/* line 85, sass/modules/_header.scss */
+.main-nav > ul > li > ul li a {
+  display: block;
+  padding: 10px 20px;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: all 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: all 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 92, sass/modules/_header.scss */
+.main-nav > ul > li > ul li a:hover {
+  background-color: #9CBA75;
+  color: #FFFFFF;
+}
+/* line 104, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu:hover > ul {
+  display: block !important;
+}
+/* line 108, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu:hover:after {
+  display: block;
+}
+/* line 112, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-color: transparent;
+  display: none;
+}
+/* line 123, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul {
+  display: none !important;
+  position: absolute;
+  left: -30px;
+  display: block;
+  background-color: #000000;
+}
+/* line 130, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li {
+  width: 205px;
+}
+/* line 133, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul {
+  display: block;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  height: auto;
+}
+/* line 138, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li {
+  padding: 30px;
+  float: left;
+}
+/* line 142, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li a {
+  padding: 0;
+  display: block;
+  position: relative;
+}
+/* line 147, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li a:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 158, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li a:first-child:hover:after {
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 162, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li a:hover {
+  text-decoration: underline;
+}
+/* line 167, sass/modules/_header.scss */
+.main-nav > ul li.mega-menu > ul > li > ul > li:hover a {
+  background-color: #000000;
+}
+/* line 177, sass/modules/_header.scss */
+.main-nav a {
+  color: #999999;
+  text-decoration: none;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 182, sass/modules/_header.scss */
+.main-nav a:hover, .main-nav a:focus {
+  color: #9CBA75;
+}
+
+/* line 189, sass/modules/_header.scss */
+.social-and-search {
+  text-align: right;
+  position: relative;
+}
+/* line 193, sass/modules/_header.scss */
+.social-and-search .social,
+.social-and-search .search-form {
+  display: inline-block;
+}
+/* line 197, sass/modules/_header.scss */
+.social-and-search .social a,
+.social-and-search .search-form a {
+  color: #999999;
+}
+/* line 204, sass/modules/_header.scss */
+.social-and-search .social li {
+  margin-right: 20px;
+  padding: 0;
+  font-size: 13px;
+}
+/* line 209, sass/modules/_header.scss */
+.social-and-search .social li a:hover,
+.social-and-search .social li a:focus {
+  color: #9CBA75;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 217, sass/modules/_header.scss */
+.social-and-search .search-form {
+  position: absolute;
+  right: -20px;
+  bottom: -73px;
+  width: 250px;
+  background-color: #000000;
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: opacity 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: opacity 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  z-index: 10;
+}
+/* line 227, sass/modules/_header.scss */
+.social-and-search .search-form.is-display {
+  /* Content for ie 8.
+  Min version: 9.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 232, sass/modules/_header.scss */
+.social-and-search .search-form > .form-group {
+  margin: 0;
+  position: relative;
+  padding: 10px;
+}
+/* line 237, sass/modules/_header.scss */
+.social-and-search .search-form > .form-group .btn-seach {
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  border-radius: 0;
+  background-color: transparent;
+  color: #999999;
+}
+/* line 246, sass/modules/_header.scss */
+.social-and-search .search-form > .form-group .form-control {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #999999;
+  /* Capability css-placeholder is prefixed with -moz because 13.9177% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  /* Capability css-placeholder is prefixed with -ms because 10.22068% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
+  /* Capability css-placeholder is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-placeholder is prefixed with -webkit because 57.6483% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+}
+/* line 61, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.social-and-search .search-form > .form-group .form-control:-moz-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 64, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.social-and-search .search-form > .form-group .form-control::-moz-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 67, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.social-and-search .search-form > .form-group .form-control:-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 56, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.social-and-search .search-form > .form-group .form-control::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 256, sass/modules/_header.scss */
+.social-and-search .search-form > .form-group .form-control:focus {
+  box-shadow: none;
+}
+/* line 261, sass/modules/_header.scss */
+.social-and-search .search-form > .form-group:after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 17px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+}
+/* line 275, sass/modules/_header.scss */
+.social-and-search #trigger-search-form {
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  color: #999999;
+  display: inline-block;
+  padding-left: 15px;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  width: 29px;
+}
+/* line 283, sass/modules/_header.scss */
+.social-and-search #trigger-search-form:hover, .social-and-search #trigger-search-form:focus {
+  color: #9CBA75;
+}
+
+/* line 290, sass/modules/_header.scss */
+.animated {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 297, sass/modules/_header.scss */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1, sass/modules/_main-headline.scss */
+  .headline-section {
+    padding-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  /* line 6, sass/modules/_main-headline.scss */
+  .headline-section .col-md-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* line 13, sass/modules/_main-headline.scss */
+.main-headline {
+  position: relative;
+}
+@media (max-width: 991px) {
+  /* line 13, sass/modules/_main-headline.scss */
+  .main-headline {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 13, sass/modules/_main-headline.scss */
+  .main-headline {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+/* line 25, sass/modules/_main-headline.scss */
+.main-headline:after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: background-color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: background-color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+}
+/* line 37, sass/modules/_main-headline.scss */
+.main-headline:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 41, sass/modules/_main-headline.scss */
+.main-headline .main-headline-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 30px 27px;
+  z-index: 20;
+}
+/* line 48, sass/modules/_main-headline.scss */
+.main-headline .main-headline-caption .headline-caption {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  margin: 20px 0 24px;
+  line-height: 50px;
+}
+/* line 56, sass/modules/_main-headline.scss */
+.main-headline .main-headline-caption .headline-caption > a {
+  color: #FFFFFF;
+}
+/* line 60, sass/modules/_main-headline.scss */
+.main-headline .main-headline-caption .headline-caption .post-rate {
+  color: #9CBA75;
+}
+/* line 66, sass/modules/_main-headline.scss */
+.main-headline .post-author a {
+  color: #999999;
+}
+
+@media (max-width: 767px) {
+  /* line 5, sass/modules/_latest-news-section.scss */
+  .latest-news-section .flex > .flex-item:first-child .frontpage-post {
+    padding-bottom: 25px;
+    border-bottom: 5px solid #f4f4f4;
+  }
+  /* line 10, sass/modules/_latest-news-section.scss */
+  .latest-news-section .flex > .flex-item:last-child .frontpage-post {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 15px;
+  }
+}
+
+/* line 1, sass/modules/_misc.scss */
+.misc-section {
+  padding-bottom: 0;
+}
+
+/* line 5, sass/modules/_misc.scss */
+.cat-news-group {
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  border-bottom: 1px dotted #999999;
+}
+@media (max-width: 767px) {
+  /* line 5, sass/modules/_misc.scss */
+  .cat-news-group {
+    border-bottom: 5px solid #f4f4f4;
+    margin-bottom: 30px;
+  }
+  /* line 14, sass/modules/_misc.scss */
+  .cat-news-group:last-child {
+    border-bottom: none;
+  }
+}
+/* line 19, sass/modules/_misc.scss */
+.cat-news-group .horizontal-style {
+  margin-bottom: 40px;
+}
+/* line 23, sass/modules/_misc.scss */
+.cat-news-group li:last-child .horizontal-style {
+  margin-bottom: 0;
+}
+/* line 27, sass/modules/_misc.scss */
+.cat-news-group li .horizontal-style {
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  /* line 27, sass/modules/_misc.scss */
+  .cat-news-group li .horizontal-style {
+    margin-bottom: 20px;
+  }
+}
+/* line 34, sass/modules/_misc.scss */
+.cat-news-group li .horizontal-style > a:first-child {
+  margin-right: 15px;
+}
+/* line 38, sass/modules/_misc.scss */
+.cat-news-group li .horizontal-style .frontpage-post-small-title {
+  font-size: 14px;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0;
+}
+/* line 46, sass/modules/_misc.scss */
+.cat-news-group li .horizontal-style .frontpage-post-small-title a {
+  color: #222222;
+}
+
+/* line 53, sass/modules/_misc.scss */
+.leaderboard {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 50px;
+}
+/* line 58, sass/modules/_misc.scss */
+.leaderboard img {
+  min-width: 100%;
+}
+
+/* line 3, sass/modules/_sidebar.scss */
+.widget .widget-title {
+  color: #222222;
+  /* Capability css-boxshadow is prefixed with -moz because 0.16452% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-box-shadow: inset 0 -5px 0 0 #DDDDDD;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 1.6785% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-box-shadow: inset 0 -5px 0 0 #DDDDDD;
+  box-shadow: inset 0 -5px 0 0 #DDDDDD;
+}
+
+/* line 9, sass/modules/_sidebar.scss */
+.recentcomments {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+/* line 15, sass/modules/_sidebar.scss */
+.recentcomments .comment-author-content {
+  background-color: #DDDDDD;
+  display: block;
+  padding: 20px 20px 15px;
+  font-style: italic;
+  /* Capability border-radius is prefixed with -moz because 0.25036% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-border-radius: 3px;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.1583% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  /* Capability css-boxshadow is prefixed with -moz because 0.16452% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-box-shadow: 0 1px #C2C2C2;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 1.6785% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-box-shadow: 0 1px #C2C2C2;
+  box-shadow: 0 1px #C2C2C2;
+  position: relative;
+  margin-bottom: 11px;
+}
+/* line 25, sass/modules/_sidebar.scss */
+.recentcomments .comment-author-content:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: #DDDDDD;
+  left: 20px;
+  bottom: -6px;
+  /* Capability css-boxshadow is prefixed with -moz because 0.16452% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-box-shadow: 0 1px #C2C2C2, 1px 0 #C2C2C2;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 1.6785% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-box-shadow: 0 1px #C2C2C2, 1px 0 #C2C2C2;
+  box-shadow: 0 1px #C2C2C2, 1px 0 #C2C2C2;
+  /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transform: rotate(45deg);
+  /* Capability transforms2d is prefixed with -ms because 2.6001% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
+  -ms-transform: rotate(45deg);
+  /* Capability transforms2d is not prefixed with -o because 0.08196% of users are affected which is less than the threshold of 0.1. */
+  /* Capability transforms2d is prefixed with -webkit because 52.08628% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 767px) {
+  /* line 40, sass/modules/_sidebar.scss */
+  .widget-area-footer {
+    margin-bottom: 60px;
+  }
+}
+/* line 47, sass/modules/_sidebar.scss */
+.recent-news .recent-new {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 20px;
+}
+/* line 51, sass/modules/_sidebar.scss */
+.recent-news .recent-new img {
+  width: 75px;
+  height: 75px;
+}
+/* line 58, sass/modules/_sidebar.scss */
+.recent-news .recent-new > a:first-child {
+  display: block;
+  margin-right: 15px;
+  float: left;
+  position: relative;
+}
+/* line 64, sass/modules/_sidebar.scss */
+.recent-news .recent-new > a:first-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: background-color 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: background-color 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+/* line 76, sass/modules/_sidebar.scss */
+.recent-news .recent-new > a:first-child:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 81, sass/modules/_sidebar.scss */
+.recent-news .recent-new > a:nth-child(2) {
+  font-size: 14px;
+  color: #222222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* FOOTER */
+/* line 2, sass/modules/_footer.scss */
+#footer {
+  background-color: #26232D;
+  color: #999999;
+  padding: 40px 0 0;
+}
+/* line 7, sass/modules/_footer.scss */
+#footer a {
+  color: #999999;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.2s ease-in;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.2s ease-in;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 11, sass/modules/_footer.scss */
+#footer a:hover {
+  color: #FFFFFF;
+}
+/* line 16, sass/modules/_footer.scss */
+#footer .widget-title {
+  color: #FFFFFF;
+  /* Capability css-boxshadow is prefixed with -moz because 0.16452% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-box-shadow: inset 0 -5px 0 0 rgba(255, 255, 255, 0.05);
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 1.6785% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-box-shadow: inset 0 -5px 0 0 rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 -5px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* line 23, sass/modules/_footer.scss */
+.form-subcribe p {
+  margin-bottom: 26px;
+}
+/* line 27, sass/modules/_footer.scss */
+.form-subcribe .form-control {
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #26232D;
+  padding: 3px 15px;
+  color: #999999;
+  margin-bottom: 15px;
+  /* Capability css-placeholder is prefixed with -moz because 13.9177% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  /* Capability css-placeholder is prefixed with -ms because 10.22068% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
+  /* Capability css-placeholder is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-placeholder is prefixed with -webkit because 57.6483% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+}
+/* line 61, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.form-subcribe .form-control:-moz-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 64, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.form-subcribe .form-control::-moz-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 67, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.form-subcribe .form-control:-ms-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 56, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+.form-subcribe .form-control::-webkit-input-placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 40, sass/modules/_footer.scss */
+.form-subcribe .form-control:focus {
+  box-shadow: none;
+}
+
+/* line 48, sass/modules/_footer.scss */
+.flick-img .flick-img-item {
+  float: left;
+  margin: 0 2% 2% 0;
+  max-width: 80px;
+  width: 23%;
+}
+/* line 54, sass/modules/_footer.scss */
+.flick-img .flick-img-item > a {
+  display: block;
+  position: relative;
+}
+/* line 58, sass/modules/_footer.scss */
+.flick-img .flick-img-item > a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: background-color 0.4s;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: background-color 0.4s;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+/* line 69, sass/modules/_footer.scss */
+.flick-img .flick-img-item > a:hover:after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 76, sass/modules/_footer.scss */
+.gt-ie8 .flick-img .flick-img-item {
+  margin-right: 7px;
+}
+
+/* line 80, sass/modules/_footer.scss */
+.copyright {
+  background-color: #312E38;
+  padding: 40px 0 36px;
+  margin-top: 60px;
+}
+@media (max-width: 767px) {
+  /* line 80, sass/modules/_footer.scss */
+  .copyright {
+    margin-top: 40px;
+  }
+}
+/* line 89, sass/modules/_footer.scss */
+.copyright .copyright-info {
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  /* line 89, sass/modules/_footer.scss */
+  .copyright .copyright-info {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* line 102, sass/modules/_footer.scss */
+.footer-nav > ul {
+  text-align: center;
+}
+/* line 105, sass/modules/_footer.scss */
+.footer-nav > ul > li {
+  display: inline-block;
+  padding: 0 17px 0 13px;
+  background: transparent url("images/footer-nav-dot.jpg") no-repeat right bottom;
+  height: 18px;
+}
+/* line 111, sass/modules/_footer.scss */
+.footer-nav > ul > li:last-child {
+  background: transparent;
+}
+/* line 115, sass/modules/_footer.scss */
+.footer-nav > ul > li a {
+  font-size: 13px;
+  font-style: italic;
+}
+
+@media (max-width: 767px) {
+  /* line 1, sass/modules/_custom-bootstrap.scss */
+  .col-xs-1,
+  .col-sm-1,
+  .col-md-1,
+  .col-lg-1,
+  .col-xs-2,
+  .col-sm-2,
+  .col-md-2,
+  .col-lg-2,
+  .col-xs-3,
+  .col-sm-3,
+  .col-md-3,
+  .col-lg-3,
+  .col-xs-4,
+  .col-md-4,
+  .col-lg-4,
+  .col-xs-5,
+  .col-sm-5,
+  .col-md-5,
+  .col-lg-5,
+  .col-xs-6,
+  .col-sm-6,
+  .col-md-6,
+  .col-lg-6,
+  .col-xs-7,
+  .col-sm-7,
+  .col-md-7,
+  .col-lg-7,
+  .col-xs-8,
+  .col-sm-8,
+  .col-md-8,
+  .col-lg-8,
+  .col-xs-9,
+  .col-sm-9,
+  .col-md-9,
+  .col-lg-9,
+  .col-xs-10,
+  .col-sm-10,
+  .col-md-10,
+  .col-lg-10,
+  .col-xs-11,
+  .col-sm-11,
+  .col-md-11,
+  .col-lg-11,
+  .col-xs-12,
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

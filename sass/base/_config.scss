@@ -1,0 +1,42 @@
+/**
+* 1. COLOR
+*
+* Base color for theme.
+*/
+
+/* Color hex */
+$baltic-sea          : #26232D;
+$olivine             : #9CBA75;
+$minesshaft          : #222222;
+$tundora             : #444444;
+$dusty-gray          : #999999;
+$roman               : #D75353;
+$white               : #FFFFFF;
+$burnt-sienna        : #E7864B;
+$amethyst            : #B34BC6;
+$punch               : #DF3C3C;
+$alto                : #DDDDDD;
+$goldenrod           : #FEDB66;
+$baltic-sea-2        : #312E38;
+$black				 : #000000;
+$light-gray          : #f4f4f4;
+$silver              : #C2C2C2;
+
+/* color schema */	
+$color-primary       : $baltic-sea;
+$color-secondary     : $olivine;
+$color-text			 : $tundora;
+$color-heading       : $minesshaft;
+$color-text-light    : $dusty-gray;
+
+/**
+* 2. FONT
+*
+* Font size, font-family, line-height setting.
+*/
+$font-family-1: 'Roboto', sans-serif;
+$font-family-2: 'Roboto Slab', serif;
+$font-family-3: 'Libre Baskerville', serif;
+
+$font-size: 14px;
+$line-height: 24px;
